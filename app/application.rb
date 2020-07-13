@@ -11,7 +11,9 @@
   
   #     if req.path.match(/items/)
   #       item_name = req.path.split("/items/").last
-  #       #what is happening in this line?!
+  #       #what is happening in this line?! ANSWER: this is
+  #       setting item variable  in a way that could end upequaling NIL
+  #       So if it ends up as NIl it will result in false 
   #       if item =@@items.find{|i| i.name == item_name}
   #         resp.write item.price
   #       else 
